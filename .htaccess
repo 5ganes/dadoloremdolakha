@@ -1,0 +1,41 @@
+AddType text/x-component .htc
+
+RewriteEngine On
+# localhost
+ RewriteBase /dadodolakha/
+# live
+# RewriteBase /
+
+
+RewriteRule ^cart/remove/([0-9]+)$ index.php?action=cart&removeId=$1 [L]
+RewriteRule ^cart/([0-9]+)$ index.php?action=cart&productId=$1 [L]
+RewriteRule ^cart index.php?action=cart [L]
+
+#for sewakendra
+RewriteRule ^sewakendra/([-A-Za-z0-9]+).html$ index.php?action=sewakendra&url=$1 [L]
+RewriteRule ^sewakendra.html index.php?action=showsewakendra
+
+RewriteRule ^makelogin index.php?action=make_log_in [L]
+RewriteRule ^forgotpassword index.php?action=forgot_password [L]
+RewriteRule ^home index.php [L]
+
+RewriteRule ^contact-us index.php?action=contact-us [L]
+RewriteRule ^category-([-A-Za-z0-9]+).html$ index.php?url=$1&action=showcategory [L]
+
+# fro TESTIMONIALS and FEEDBACK
+RewriteRule ^testimonials/([-A-Za-z]+)/([-A-Za-z0-9]+)$ index.php?action=testimonials&$1=$2 [L]
+RewriteRule ^testimonials index.php?action=testimonials [L]
+
+RewriteRule ^feedback/([-A-Za-z]+)/([-A-Za-z0-9]+)$ index.php?action=feedback&$1=$2 [L]
+RewriteRule ^feedback index.php?action=feedback [L]
+
+RewriteRule ^([-A-Za-z0-9]+)/page/([0-9]+)$ index.php?query=$1&page=$2 [L]
+RewriteRule ^([-A-Za-z0-9])+$ index.php?query=$0 [L]
+#RewriteRule index.html$ index.php [L]
+
+
+#RewriteRule ^gallery/([0-9]+)\.html$ index.php?galleryId=$1 [L]
+#RewriteRule ^testimonials/([-A-Za-z0-9]+)\.html$ index.php?action=testimonials&$1 [L]
+#RewriteRule ^search/([-A-Za-z0-9]+)/([0-9])\.html$ index.php?action=search&keyword=$1&page=$2 [L]
+#RewriteRule ^([-A-Za-z0-9]+)/([-A-Za-z0-9]+)\.html$ index.php?action=$1&title=$2 [L]
+#RewriteRule ^([-A-Za-z0-9]+)\.html$ index.php?title=$1 [L]

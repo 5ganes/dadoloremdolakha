@@ -12,7 +12,7 @@
                 	<img src="<?=CMS_GROUPS_DIR.$pageGet['image']?>" class="img-responsive" alt=""/>
            	 	</div>
             <?php }?>
-            <div class="col-md-7 about-text-right" style="text-align:justify">
+            <div class="col-md-11 about-text-right" style="text-align:justify">
                 <h4>
                 	<?php echo $pageGet['contents'];?>
                 </h4>
